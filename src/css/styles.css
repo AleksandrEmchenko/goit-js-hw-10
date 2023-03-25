@@ -19,9 +19,14 @@ body {
   margin-bottom: 16px;
 }
 
+ul{
+  list-style: none;
+}
 
-.country-list, .country-info{
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 0 10px 0 #cccccc;
+h2{
+  display: inline;
+  font-size: 26px;
+}
+h3{
+  display: inline;
 }
