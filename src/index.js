@@ -14,8 +14,8 @@ searchEl.addEventListener("input", debounce(handleSearchCountry, DEBOUNCE_DELAY)
 
 function handleSearchCountry(event) {
     let country = event.target.value.trim();
-
-    return fetchCountries(country)
+        if(country){
+            return fetchCountries(country)
     .then(data =>{
         markup(data);
 
@@ -23,6 +23,11 @@ function handleSearchCountry(event) {
     .catch(error => {
         Notify.failure("Oops, there is no country with that name");
     })
+        }else{
+            countryListEl.innerHTML = '';
+            countryInfoEl.innerHTML = '';
+        }
+    
 
 }
 
